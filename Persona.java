@@ -12,10 +12,12 @@ public class Persona {
     
     private String nombre;
     private int edad;
+    private int id;
 
-    public Persona(String nombre, int edad) {
+    public Persona(String nombre, int edad, int id) {
         this.nombre = nombre;
         this.edad = edad;
+        this.id = id;
     }
 
     public String getNombre() {
@@ -33,10 +35,20 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    
     
     @Override
     public String toString() {
-        return nombre + " tiene " + edad + " años)";
+        return nombre + " tiene " + edad + " años y su ID es: " + id;
     }
     
 }
